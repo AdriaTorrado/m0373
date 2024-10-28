@@ -1,0 +1,22 @@
+.contenedor-cuadrados{
+    border: 1px solid;
+    display: flex;
+    flex-direction:row ;
+    justify-content: end;
+    gap: 10px;
+    align-items: center;
+}
+
+.cuadrado{
+    display: inline-block;
+    width: 300px;
+    height: 100px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    border: 1px solid;
+}
