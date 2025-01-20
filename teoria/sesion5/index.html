@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesion 5: form y tablas</title>
+    <style>
+        table{
+            border: 1px solid;
+        }
+        tr{
+            border: 1px dotted;
+        }
+        td{
+            background-color: bisque;
+        }
+        th{
+            background-color: grey;
+            color: white;
+        }
+        tfoot{
+            font-size: 0.5em;
+            text-align: end;
+        }
+        tfoot td{
+            background-color: white;
+        }
+        .entrada{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tablas y formularios</h1>
+
+    <h2>tablas</h2>
+    <table>
+        <caption>Alumnos 2025</caption>
+        <thead>
+            <tr>
+                <th scope="col">DNI</th>
+                <th scope="col">NOMBR</th>
+                <th scope="col" colspan="2">APELLIDOS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12344444L</td>
+                <td>Juan</td>
+                <td>Sáncez</td>
+                <td>Redondo</td>
+            </tr>
+            <tr>
+                <td>15555578L</td>
+                <td>Maria</td>
+                <td>Sáncez</td>
+                <td>Redondo</td>
+            </tr>
+            <tr>
+                <td>12345678L</td>
+                <td>pepe</td>
+                <td>Sáncez</td>
+                <td>Redondo</td>
+            </tr>
+        </tbody>
+        <tfoot>
+                <tr>
+                    <td colspan="4">Nomres de los alumnos 2025</td>
+                </tr>
+        </tfoot>
+    </table>
+
+    <h2>formularios</h2>
+    <form action="procesadatos.php">
+        <div class="entrada">
+            <label for="nombreAlumno">Nombre alumno:</label>
+            <input id="nombreAlumno" type="text" value="" name="Nombre" maxlength="10" placeholder="Entra aqui tu nombre" required>
+        </div>
+        <div class="entrada">
+            <label for="edadAlumno">Edad alumno:</label>
+            <input id="edadAlumno" type="number" name="Edad" max="99" min="18">
+        </div>
+        <div class="entrada">
+            <label for="fechaAlumno">Fecha nacimiento alumno:</label>
+            <input id="fechaAlumno" type="date" name="Fecha">
+        </div>
+
+        <div class="entrada">
+            <label for="curriculumAlumno">Curriculum:</label>
+            <textarea name="Curriculum" id="curriculumAlumno" cols="40" rows="10" placeholder="Escribe aqui tu curriculum..."></textarea>
+        </div>
+
+        <div class="entrada">
+            <label for="paisAlumno">Pais:</label>
+            <select name="Pais" id="paisAlumno">
+                <option value="es">España</option>
+                <option value="fr">Francia</option>
+                <option value="dn">Dinamarca</option>
+            </select>
+            <label for="gm">GM:</label>
+            <input type="radio" name="Estudios" id="gm" value="gm">
+            <label for="gs">GS:</label>
+            <input type="radio" name="Estudios" id="gs" value="gs">
+        </div>
+
+        <div>
+            <label for="trabajoAlumno">Trabaja actualmente</label>
+            <input type="checkbox" name="Trabajo" id="trabajoAlumno" checked>
+        </div>
+        
+        <button>Enviar</button>
+    </form>
+</body>
+</html>
