@@ -63,3 +63,52 @@ function alertaClick(){
     console.log("has hecho click en el boton")
     alert("Has hecho click!!!!!")
 }
+
+// Creamos una matriz de objetos y accedemos a sus propiedades
+const alumnosDaw = [
+    {
+        nombre: "Paco",
+        apellidos: "Sanchez Alcaraz",
+        edad: 20,
+        notas:[7, 8, 9], 
+    },
+    {
+        nombre : "Pepa",
+        apellidos: "Sanchez Alcaraz",
+        edad: 20,
+        notas:[7, 8, 9],
+    },
+    {
+        nombre : "Adres",
+        apellidos:  "Sanchez Alcaraz",
+        edad: 20,
+        notas:[4, 5, 10],
+    },
+    {
+        nombre : "Sofia",
+        apellidos:  "Sanchez Alcaraz",
+        edad: 20,
+        notas:[4, 5, 10],
+    },
+]
+
+// Aceder a los elementos de los array  de objetos
+console.log("Segundo alumn@", alumnosDaw[1].nombre)
+
+let filasBody = "";
+
+
+// Usamos un bucle para generar los tr
+for(let i=0;i<alumnosDaw.length;i++){
+    console.log(i)
+    filasBody= filasBody +`
+     <tr>
+        <td>${i}</td>
+        <td>${alumnosDaw[i].nombre}</td>
+        <td>${alumnosDaw[i].apellidos}</td>
+    </tr>
+    `;
+}
+
+const miTabla = document.querySelector("tbody")
+miTabla.innerHTML = filasBody
