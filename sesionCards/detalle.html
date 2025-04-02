@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle</title>
+</head>
+<body>
+    <h1>Página detalle</h1>
+    <h2>Nombre: </h2>
+    <h3>Email: </h3>
+    <script>
+        // array con los datos dr los usuarios
+        const usuarios= [
+            {id: 1, nombre: 'Carlos', edad: 30, email: 'carlos@example'},
+            {id: 1, nombre: 'Ana', edad: 25, email: 'carlos@example'},
+            {id: 1, nombre: 'Luis', edad: 28, email: 'carlos@example'},
+            {id: 1, nombre: 'Marta', edad: 32, email: 'carlos@example'},
+            {id: 5, nombre: 'Jorge', edad: 27, email: 'carlos@example'}
+        ];
+
+
+        console.log('Hola desde detalle');
+
+        const url = window.location.href
+        console.log('url completa: ',url);
+        const parametros = new URLSearchParams(window.location.search);
+        console.log('parametros: ',parametros);
+        const id = parametros.get('id');
+        console.log('id: ',id);
+        
+        const nombre = usuarios[3-1].nombre
+        const email= usuarios[3-1].email
+
+        document.querySelector('#nombre').innerHTML = nombre;
+        document.querySelector('#email').innerHTML = email;
+    </script>
+</body>
+</html>
